@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-apr-2011 21:18:08 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="nl.yasmijn.state.tax.TaxBracket" table="TAXBRACKET">
+        <id name="bracketOrder" type="int">
+            <column name="BRACKETORDER" />
+            <generator class="assigned" />
+        </id>
+        <property name="lowerBound" type="int">
+            <column name="LOWERBOUND" />
+        </property>
+        <property name="upperBound" type="int">
+            <column name="UPPERBOUND" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-apr-2011 21:18:08 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="nl.yasmijn.state.tax.Reduction" table="REDUCTION">
+        <id name="pensionAge" type="int" access="field">
+            <column name="PENSIONAGE" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionBirthYear" type="int" access="field">
+            <column name="PENSIONBIRTHYEAR" />
+        </property>
+        <primitive-array name="labourReduMax" table="REDUCTION" access="field">
+            <key>
+                <column name="PENSIONAGE" />
+            </key>
+            <index></index>
+            <element type="int">
+                <column name="LABOURREDUMAX" />
+            </element>
+        </primitive-array>
+        <primitive-array name="labourReduRate" table="REDUCTION" access="field">
+            <key>
+                <column name="PENSIONAGE" />
+            </key>
+            <index></index>
+            <element type="double">
+                <column name="LABOURREDURATE" />
+            </element>
+        </primitive-array>
+        <property name="labourReduBaseRate" type="double" access="field">
+            <column name="LABOURREDUBASERATE" />
+        </property>
+        <property name="labourReductionIncomeThreshold" type="int" access="field">
+            <column name="LABOURREDUCTIONINCOMETHRESHOLD" />
+        </property>
+        <property name="labourReductionIncomeTopThreshold" type="int" access="field">
+            <column name="LABOURREDUCTIONINCOMETOPTHRESHOLD" />
+        </property>
+        <property name="labourReductionIncomeReduMax" type="int" access="field">
+            <column name="LABOURREDUCTIONINCOMEREDUMAX" />
+        </property>
+        <property name="labourReductionIncomeReduRate" type="double" access="field">
+            <column name="LABOURREDUCTIONINCOMEREDURATE" />
+        </property>
+        <property name="pensLabReduBaseRate" type="double" access="field">
+            <column name="PENSLABREDUBASERATE" />
+        </property>
+        <property name="pensLabReduMax" type="int" access="field">
+            <column name="PENSLABREDUMAX" />
+        </property>
+        <property name="pensLabReduRate" type="double" access="field">
+            <column name="PENSLABREDURATE" />
+        </property>
+        <property name="pensLabReductionIncomeThreshold" type="int" access="field">
+            <column name="PENSLABREDUCTIONINCOMETHRESHOLD" />
+        </property>
+        <property name="pensLabReductionIncomeTopThreshold" type="int" access="field">
+            <column name="PENSLABREDUCTIONINCOMETOPTHRESHOLD" />
+        </property>
+        <property name="pensLabReductionIncomeReduMax" type="int" access="field">
+            <column name="PENSLABREDUCTIONINCOMEREDUMAX" />
+        </property>
+        <property name="pensLabReductionIncomeReduRate" type="double" access="field">
+            <column name="PENSLABREDUCTIONINCOMEREDURATE" />
+        </property>
+        <property name="combinationThreshold" type="int" access="field">
+            <column name="COMBINATIONTHRESHOLD" />
+        </property>
+        <property name="combinationBase" type="int" access="field">
+            <column name="COMBINATIONBASE" />
+        </property>
+        <property name="combinationPensionerBase" type="int" access="field">
+            <column name="COMBINATIONPENSIONERBASE" />
+        </property>
+        <property name="combinationRate" type="double" access="field">
+            <column name="COMBINATIONRATE" />
+        </property>
+        <property name="combinationPensionerRate" type="double" access="field">
+            <column name="COMBINATIONPENSIONERRATE" />
+        </property>
+        <property name="combinationMax" type="int" access="field">
+            <column name="COMBINATIONMAX" />
+        </property>
+        <property name="combinationPensionerMax" type="int" access="field">
+            <column name="COMBINATIONPENSIONERMAX" />
+        </property>
+    </class>
+</hibernate-mapping>

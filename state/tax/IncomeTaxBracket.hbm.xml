@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-apr-2011 21:18:08 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="nl.yasmijn.state.tax.IncomeTaxBracket" extends="nl.yasmijn.state.tax.TaxBracket" table="INCOMETAXBRACKET" lazy="false">
+        <key>
+            <column name="BRACKETORDER" />
+        </key>
+        <property name="taxRate" type="double">
+            <column name="TAXRATE" />
+        </property>
+        <property name="specialTaxRate" type="double">
+            <column name="SPECIALTAXRATE" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>
